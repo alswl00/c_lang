@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(void)
+{
+  char s[9]="swimming";
+  char *t="¾ß±¸";
+  printf("s:%s\n", s+0);
+  printf("s[2]:%c\n", *(s+2));
+  printf("t:%s\n", t+0);
+  printf("t:%s\n", t+2);
+  return 0;
+}

@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(void)
+{
+  char s[]="swimming";
+  char t[5]="¾ß±¸";
+  printf("s:%s\n", s);
+  printf("s[2]:%c\n", s[2]);
+  printf("t:%s\n", t);
+  printf("t:%c%c\n",t[2],t[3]);
+  return 0;
+}

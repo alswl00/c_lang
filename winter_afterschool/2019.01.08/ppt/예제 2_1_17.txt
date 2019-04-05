@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+   char s1[]="abcdefg";
+   char s2[]="012";
+   strncpy(s1, s2, strlen(s2));
+   printf("%s\n", s1);
+   return 0;
+}

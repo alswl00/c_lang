@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+void e_reverse(char *st);
+int main(void)
+{
+  char s[]="swimming";
+  printf("문자열을 역순으로 변환\n");
+  printf("순방향 출력:%s\n", s);
+  printf("역순   변환:");
+  e_reverse(s);
+  printf("%s\n", s);
+  return 0;
+}
+
+void e_reverse(char *st)
+{
+  char temp;
+  int i, j;
+  j=strlen(st)-1;
+  for(i=0;i<strlen(st)/2;i++)
+  {
+	 temp=st[i];
+	 st[i]=st[j];
+	 st[j]=temp;
+	 j--;
+  }
+}

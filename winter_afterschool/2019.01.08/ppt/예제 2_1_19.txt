@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+void str_replace(char *s1, char *s2, int loc);
+void str_replace01(char *s1, char *s2, int loc);
+int main(void)
+{
+	char st1[]="0123456789";
+	char *st2="abc";
+	int loc;
+	printf("st1: %s, length=%d\n", st1, strlen(st1));
+	printf("st2: %s, length=%d\n\n", st2, strlen(st2));
+	printf("st2로 대체할 위치를 입력하고 Enter>");
+	scanf("%d", &loc);
+	str_replace01(st1, st2, loc);
+	printf("삽입위치 : %d\n", loc);
+	printf("st1: %s, length=%d\n", st1, strlen(st1));
+	return 0;
+}
+void str_replace(char *s1, char *s2, int loc)
+{
+	memmove(s1+loc, s2, strlen(s2));
+}
+
+void str_replace01(char *s1, char *s2, int loc)
+{
+	memcpy(s1+loc, s2, strlen(s2));
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+void h_reverse(char *st);
+int main(void)
+{
+  char t[9]="가나다라";
+  printf("한글을 역순으로 변환\n");
+  printf("순방향 출력:%s\n", t);
+  printf("역순   변환:");
+  h_reverse(t);
+  printf("%s\n", t);
+  return 0;
+}
+
+void h_reverse(char *st)
+{
+  char temp;
+  int i, k1, k2;
+  k1=strlen(st)-2;
+  k2=k1+1;
+  for(i=0;i<strlen(st)/4;i+=2)
+  {
+	 temp=st[k1];
+	 st[k1]=st[i];
+	 st[i]=temp;
+	 k1-=2;
+  }
+  for(i=1;i<=strlen(st)/4;i+=2)
+  {
+	 temp=st[k2];
+	 st[k2]=st[i];
+	 st[i]=temp;
+	 k2-=2;
+  }
+}

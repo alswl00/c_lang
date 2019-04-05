@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+void my_strcat(char *d, char *s);
+int main(void)
+{
+  char d[15]="love";
+  char s[6]="holic";
+  my_strcat(d, s);
+  printf("%s\n", d);
+  return 0;
+}
+
+void my_strcat(char *d, char *s)
+{
+   char length=strlen(d);
+   while(*s)
+    *(d+length++)=*s++;
+}

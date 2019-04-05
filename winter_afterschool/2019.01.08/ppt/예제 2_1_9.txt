@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+void reverse_hangul(char *st);
+int main(void)
+{
+  char *t="가나다라";
+  printf("문자열을 역으로 출력\n");
+  printf("순방향 출력:%s\n", t);
+  printf("역방향 출력:");
+  reverse_hangul(t);
+  printf("\n");
+  return 0;
+}
+
+void reverse_hangul(char *st)
+{
+  int i;
+  for(i=strlen(st)-2;i>=0;i-=2)
+      printf("%c%c", st[i],st[i+1]);
+}

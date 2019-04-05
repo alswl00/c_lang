@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+void str_insert(char *s1, char *s2, int loc);
+int main(void)
+{
+  char s1[20]="abcdefghij";
+  char *s2="012";
+  int loc;
+  printf("s1:%s, 길이:%d\n", s1, strlen(s1));
+  printf("s2:%s\n", s2);
+  printf("s1에 삽입할 위치(0~9)입력 후 Enter>");
+  scanf("%d", &loc);
+  str_insert(s1, s2, loc);
+  printf("\ns1:%s, 길이:%d\n", s1, strlen(s1));
+  return 0;
+}
+
+void str_insert(char *s1, char *s2, int loc)
+{
+  int length1=strlen(s1);
+  int length2=strlen(s2);
+  memmove(s1+loc+strlen(s2), s1+loc, length1-loc);
+  memmove(s1+loc, s2, length2);
+}

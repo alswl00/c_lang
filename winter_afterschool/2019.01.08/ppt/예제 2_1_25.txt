@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+ char *s1="salad";
+ char *s2="salary";
+ int ptr;
+ ptr=strcmp(s1, s2);
+ printf("strcmp의 값 : %d\n", ptr);
+ ptr=strncmp(s1, s2, 12);
+ printf("strncmp결과\n");
+ if (ptr>0)
+   printf("문자열 s1이 s2보다 크다.\n");
+ else if (ptr<0)
+   printf("문자열 s1이 s2보다 작다.\n");
+ else
+   printf("문자열 s1과 s2가 같다.\n");
+ return 0; 
+}

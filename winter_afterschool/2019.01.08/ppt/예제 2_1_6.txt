@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void)
+{
+	char ch1='E', ch2='h';
+	printf("%c \n", ch1+32);
+	printf("%c \n", ch2-32);
+	printf("%c \n", tolower(ch1));
+	printf("%c \n", toupper(ch2));
+	return 0;
+}
